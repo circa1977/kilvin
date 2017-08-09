@@ -1,16 +1,16 @@
 <?php
 
-namespace Groot\Providers;
+namespace Kilvin\Providers;
 
 use Site;
 use Cookie;
 use Request;
 use Closure;
 use Carbon\Carbon;
-use Groot\Core\Url;
-use Groot\Core\Output;
-use Groot\Core\Language;
-use Groot\Core\Functions;
+use Kilvin\Core\Url;
+use Kilvin\Core\Output;
+use Kilvin\Core\Language;
+use Kilvin\Core\Functions;
 use Illuminate\Http\Response;
 use Illuminate\Container\Container;
 use Illuminate\Support\ServiceProvider;

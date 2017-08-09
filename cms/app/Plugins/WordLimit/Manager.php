@@ -1,6 +1,6 @@
 <?php
 
-namespace Groot\Plugins\WordLimit;
+namespace Kilvin\Plugins\WordLimit;
 
 use DB;
 use Schema;

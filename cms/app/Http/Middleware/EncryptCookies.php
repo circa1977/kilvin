@@ -1,6 +1,6 @@
 <?php
 
-namespace Groot\Http\Middleware;
+namespace Kilvin\Http\Middleware;
 
 use Illuminate\Cookie\Middleware\EncryptCookies as BaseEncrypter;
 

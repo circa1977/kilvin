@@ -1,6 +1,6 @@
 <?php
 
-namespace Groot\Console;
+namespace Kilvin\Console;
 
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;

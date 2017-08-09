@@ -1,12 +1,12 @@
 <?php
 
-namespace Groot\Http\Controllers;
+namespace Kilvin\Http\Controllers;
 
 use Site;
 use Stats;
 use Template;
-use Groot\Core\Url;
-use Groot\Core\Actions;
+use Kilvin\Core\Url;
+use Kilvin\Core\Actions;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 

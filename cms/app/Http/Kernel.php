@@ -1,6 +1,6 @@
 <?php
 
-namespace Groot\Http;
+namespace Kilvin\Http;
 
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 
@@ -16,8 +16,8 @@ class Kernel extends HttpKernel
     protected $middleware = [
         \Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode::class,
         \Illuminate\Foundation\Http\Middleware\ValidatePostSize::class,
-        \Groot\Http\Middleware\TrimStrings::class,
-        \Groot\Http\Middleware\Cms\HtmlPurify::class,
+        \Kilvin\Http\Middleware\TrimStrings::class,
+        \Kilvin\Http\Middleware\Cms\HtmlPurify::class,
     ];
 
     /**
@@ -27,15 +27,15 @@ class Kernel extends HttpKernel
      */
     protected $middlewareGroups = [
         'web' => [
-            \Groot\Http\Middleware\EncryptCookies::class,
+            \Kilvin\Http\Middleware\EncryptCookies::class,
             \Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse::class,
             \Illuminate\Session\Middleware\StartSession::class,
             \Illuminate\View\Middleware\ShareErrorsFromSession::class,
-            \Groot\Http\Middleware\VerifyCsrfToken::class,
+            \Kilvin\Http\Middleware\VerifyCsrfToken::class,
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
-            \Groot\Http\Middleware\Cms\CmsSession::class,
-            \Groot\Http\Middleware\Cms\LoadPlugins::class, // After all other boots and checks
-            \Groot\Http\Middleware\Cms\Cleanup::class
+            \Kilvin\Http\Middleware\Cms\CmsSession::class,
+            \Kilvin\Http\Middleware\Cms\LoadPlugins::class, // After all other boots and checks
+            \Kilvin\Http\Middleware\Cms\Cleanup::class
         ],
 
         'api' => [
@@ -56,7 +56,7 @@ class Kernel extends HttpKernel
        // 'auth.basic' => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
         'bindings' => \Illuminate\Routing\Middleware\SubstituteBindings::class,
        // 'can' => \Illuminate\Auth\Middleware\Authorize::class,
-       // 'guest' => \Groot\Http\Middleware\RedirectIfAuthenticated::class,
+       // 'guest' => \Kilvin\Http\Middleware\RedirectIfAuthenticated::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
 
         // @todo - Use CMS' settings for throttling of requests (probably our own custom middlware)

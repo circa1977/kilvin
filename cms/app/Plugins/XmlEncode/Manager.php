@@ -1,6 +1,6 @@
 <?php
 
-namespace Groot\Plugins\XmlEncode;
+namespace Kilvin\Plugins\XmlEncode;
 
 use DB;
 use Schema;

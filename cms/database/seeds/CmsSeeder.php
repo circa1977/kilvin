@@ -568,9 +568,9 @@ class CmsSeeder extends Seeder
 		// --------------------------------------------------------------------
 
 		$body = <<<ENTRY
-Thank you for choosing Groot CMS!
+Thank you for choosing Kilvin CMS!
 
-This entry contains helpful resources to help you get the most from Groot CMS and the Groot Community.
+This entry contains helpful resources to help you get the most from Kilvin CMS and the Kilvin Community.
 
 
 <h3>Community Technical Support:</h3>
@@ -584,7 +584,7 @@ of our User Guide before posting in Slack.
 <h3>Premium Support:</h3>
 
 With our <a href="https://grootcms.com/premium-support">support subscriptions</a>
-you can receive premium support for Groot CMS from the maintainers of the code.
+you can receive premium support for Kilvin CMS from the maintainers of the code.
 
 Get help on how to best begin your development process, how to organise your team of developers
 working on the same project for maximum productivity, and answers to prompt, in-depth
@@ -597,15 +597,15 @@ Please review our <a href="https://grootcms.com/premium-support">Premium Support
 
 <a href="https://grootcms.com/getting_started.html">Getting Started Guide</a>
 <a href="https://grootcms.com/quick_start.html">Quick Start Tutorial</a>
-<a href="https://grootcms.com/docs/">Groot CMS - Documentation</a>
-<a href="https://grootcms.com/faq/">Groot CMS - FAQ</a>
+<a href="https://grootcms.com/docs/">Kilvin CMS - Documentation</a>
+<a href="https://grootcms.com/faq/">Kilvin CMS - FAQ</a>
 
 
-Love Groot CMS? Please tell your friends and professionals associates.
+Love Kilvin CMS? Please tell your friends and professionals associates.
 
 Enjoy!
 
-<strong>The Groot CMS Team</strong>
+<strong>The Kilvin CMS Team</strong>
 ENTRY;
 
 		DB::table('weblog_entries')
@@ -625,7 +625,7 @@ ENTRY;
 			[
 				'entry_id' 		 => 1,
 				'weblog_id'		 => 1,
-				'title'			 => 'Getting Started with Groot CMS',
+				'title'			 => 'Getting Started with Kilvin CMS',
 				'field_excerpt'  => '',
 				'field_body'	 => $body,
 				'field_extended' => ''

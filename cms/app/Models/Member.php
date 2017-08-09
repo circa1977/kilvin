@@ -1,10 +1,10 @@
 <?php
 
-namespace Groot\Models;
+namespace Kilvin\Models;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Groot\Notifications\ResetPassword as ResetPasswordNotification;
+use Kilvin\Notifications\ResetPassword as ResetPasswordNotification;
 
 class Member extends Authenticatable
 {

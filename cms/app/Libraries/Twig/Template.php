@@ -1,6 +1,6 @@
 <?php
 
-namespace Groot\Libraries\Twig;
+namespace Kilvin\Libraries\Twig;
 
 use Twig_Template;
 use Illuminate\View\View;

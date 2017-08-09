@@ -1,12 +1,12 @@
 
-# Groot CMS
+# Kilvin CMS
 
-## About Groot
+## About Kilvin
 
-Groot CMS is a content management system built on top of the [Laravel framework](https://laravel.com). More details will be forthcoming (like documentation!) just as soon as I finish the darn thing.
+Kilvin CMS is a content management system built on top of the [Laravel framework](https://laravel.com). More details will be forthcoming (like documentation!) just as soon as I finish the darn thing.
 
 
-## Installing Groot CMS
+## Installing Kilvin CMS
 
 ### Server Requirements
  - PHP 7.0 or later with safe mode disabled
@@ -19,10 +19,10 @@ Groot CMS is a content management system built on top of the [Laravel framework]
 
 ### Installation
 
- - Insure you have a server meeting the above requirements. [Laravel Homestead](https://laravel.com/docs/5.4/homestead) is a superb development environment for Groot CMS.
+ - Insure you have a server meeting the above requirements. [Laravel Homestead](https://laravel.com/docs/5.4/homestead) is a superb development environment for Kilvin CMS.
  - Clone this GitHub repo onto your server.
  - Configure your web server's document / web root to be the ./public directory.
- - Run the following [Composer](https://getcomposer.org) command to install Groot's code dependencies: `composer install --no-interaction --prefer-dist --optimize-autoloader`.
+ - Run the following [Composer](https://getcomposer.org) command to install Kilvin's code dependencies: `composer install --no-interaction --prefer-dist --optimize-autoloader`.
  - Until I make this public and can make this a Composer package, run these commands:
    - `cp .env.example .env`
    - `php cms/artisan key:generate`
@@ -44,9 +44,9 @@ Groot CMS is a content management system built on top of the [Laravel framework]
  - Weblog access is done on the group level.
 
 
-## Groot CMS Sponsors
+## Kilvin CMS Sponsors
 
-We would like to extend our thanks to the following sponsors for helping fund Groot CMS development. If you are interested in becoming a sponsor, please visit the Groot CMS [Patreon page](http://patreon.com/reedmaniac):
+We would like to extend our thanks to the following sponsors for helping fund Kilvin CMS development. If you are interested in becoming a sponsor, please visit the Kilvin CMS [Patreon page](http://patreon.com/reedmaniac):
 
 - **[Paul Burdick](https://paulburdick.me)** - The laziest man on the planet.
 
@@ -54,9 +54,9 @@ We would like to extend our thanks to the following sponsors for helping fund Gr
 
 ## Security Vulnerabilities
 
-If you discover a security vulnerability within Groot CMS, please send an e-mail to Paul Burdick at paul@reedmaniac.com. All security vulnerabilities will be promptly addressed.
+If you discover a security vulnerability within Kilvin CMS, please send an e-mail to Paul Burdick at paul@reedmaniac.com. All security vulnerabilities will be promptly addressed.
 
 ## License
 
-The Groot CMS is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+The Kilvin CMS is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
 

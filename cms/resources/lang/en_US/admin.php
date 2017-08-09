@@ -20,7 +20,7 @@ return [
 // ---------------------------
 
 'system_admin_blurb' =>
-"Most of the administrative aspects of Groot CMS are managed from one of the following five areas:",
+"Most of the administrative aspects of Kilvin CMS are managed from one of the following five areas:",
 
 'weblog_administration_blurb' =>
 "This area enables you to manage your weblogs, custom fields, weblog preferences, etc.",
@@ -35,7 +35,7 @@ return [
 "This area enables you to manage your Site's preferences for everything from debugging to security to themes.",
 
 'utilities_blurb' =>
-"This area contains ancillary utilities that help you manage Groot CMS' data.",
+"This area contains ancillary utilities that help you manage Kilvin CMS' data.",
 
 'image_preferences_blurb' =>
 "File uploading and image resizing are managed here.",

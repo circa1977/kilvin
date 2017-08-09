@@ -3,7 +3,7 @@
 {% extends "_page" %}
 
 {% block mainContent %}
-	<h1>Groot CMS Installer</h1>
+	<h1>Kilvin CMS Installer</h1>
 
     <h2>Installation Instructions</h2>
 
@@ -13,13 +13,13 @@
 
     <div class="warning red">
         <p>
-            <strong>Important:</strong> Do <strong>NOT</strong> run this installation routine if you are already using Groot CMS and are updating to a newer version. You'll find update instructions in the
+            <strong>Important:</strong> Do <strong>NOT</strong> run this installation routine if you are already using Kilvin CMS and are updating to a newer version. You'll find update instructions in the
             <a href="https://github.com/reedmaniac/expressionengine/blob/master/README.md">documentation</a>.
         </p>
     </div>
 
 	<form method="post" action="install.php?page=2">
         {{ csrfField() }}
-	   <p class="center"><input type="submit" class="submit" value="Install Groot CMS!" /></p>
+	   <p class="center"><input type="submit" class="submit" value="Install Kilvin CMS!" /></p>
 	</form>
 {% endblock %}

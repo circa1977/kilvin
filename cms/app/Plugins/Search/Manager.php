@@ -1,6 +1,6 @@
 <?php
 
-namespace Groot\Plugins\Search;
+namespace Kilvin\Plugins\Search;
 
 use DB;
 use Schema;

@@ -1,15 +1,15 @@
 <?php
 
-namespace Groot\Http\Controllers\Cp;
+namespace Kilvin\Http\Controllers\Cp;
 
 use Cp;
 use Auth;
 use Site;
 use Route;
 use Request;
-use Groot\Core\Url;
-use Groot\Core\Session;
-use Groot\Exceptions\CmsFatalException;
+use Kilvin\Core\Url;
+use Kilvin\Core\Session;
+use Kilvin\Exceptions\CmsFatalException;
 use Illuminate\Http\Request as IlluminateRequest;
 use Illuminate\Http\Response;
 use Illuminate\Container\Container;
@@ -146,7 +146,7 @@ class Controller extends BaseController
         //  Instantiate the Requested CP Class
         // ------------------------------------
 
-        $full_class = (stristr($class, 'Controller')) ? 'Groot\\Http\\Controllers\\Cp\\'.$class : 'Groot\Cp\\'.$class;
+        $full_class = (stristr($class, 'Controller')) ? 'Kilvin\\Http\\Controllers\\Cp\\'.$class : 'Kilvin\Cp\\'.$class;
 
         // Classes with 'Controller' is the new Laravel way
         if (stristr($class, 'Controller')) {

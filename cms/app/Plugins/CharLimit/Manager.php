@@ -1,6 +1,6 @@
 <?php
 
-namespace Groot\Plugins\CharLimit;
+namespace Kilvin\Plugins\CharLimit;
 
 use DB;
 

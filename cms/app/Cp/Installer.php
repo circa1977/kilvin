@@ -1,6 +1,6 @@
 <?php
 
-namespace Groot\Cp;
+namespace Kilvin\Cp;
 
 use Twig_Loader_Filesystem;
 use Twig_Environment;
@@ -940,7 +940,7 @@ class Installer {
                 [
                     'Unsupported PHP version',
                     sprintf(
-                        'In order to install Groot CMS, your server must be running PHP version 7.1 or newer.
+                        'In order to install Kilvin CMS, your server must be running PHP version 7.1 or newer.
                          Your server is running PHP version <em>%s</em>',
                         phpversion()
                     )
@@ -994,7 +994,7 @@ class Installer {
             }
 
             $message .= '
-            </p><p>In order to install Groot CMS, the file permissions on the above must be set as indicated in the instructions.
+            </p><p>In order to install Kilvin CMS, the file permissions on the above must be set as indicated in the instructions.
             If you are not sure how to set permissions, <a href="#">click here</a>.</p>';
 
             $errors[] = [$title, $message];
@@ -1012,7 +1012,7 @@ class Installer {
             {
                 $errors[]  = [
                     "Warning: Your installation is locked!",
-                    "<p>There already appears to be an instance of Groot CMS installed!
+                    "<p>There already appears to be an instance of Kilvin CMS installed!
                     If you wish to continue, you must locate the file <strong>config/cms.php</strong> and delete its contents.</strong>"
                 ];
             }

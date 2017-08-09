@@ -1,6 +1,6 @@
 <?php
 
-namespace Groot\Plugins\Rss;
+namespace Kilvin\Plugins\Rss;
 
 class Manager
 {

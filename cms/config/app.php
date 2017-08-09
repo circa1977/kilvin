@@ -172,15 +172,15 @@ return [
         /*
          * Application Service Providers...
          */
-        Groot\Providers\AppServiceProvider::class,
-        Groot\Providers\AuthServiceProvider::class,
-        Groot\Providers\EventServiceProvider::class,
-        Groot\Providers\RouteServiceProvider::class,
+        Kilvin\Providers\AppServiceProvider::class,
+        Kilvin\Providers\AuthServiceProvider::class,
+        Kilvin\Providers\EventServiceProvider::class,
+        Kilvin\Providers\RouteServiceProvider::class,
 
         // This order is important
-        Groot\Providers\CmsServiceProvider::class,
-        Groot\Providers\SiteServiceProvider::class,
-        Groot\Providers\TwigServiceProvider::class,
+        Kilvin\Providers\CmsServiceProvider::class,
+        Kilvin\Providers\SiteServiceProvider::class,
+        Kilvin\Providers\TwigServiceProvider::class,
     ],
 
     /*
@@ -230,13 +230,13 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
 
-        'Stats' => Groot\Facades\Stats::class,
-        'Cp' => Groot\Facades\Cp::class,
-        'Site' => Groot\Facades\Site::class,
-        'Plugins' => Groot\Facades\Plugins::class,
-        'Template' => Groot\Facades\Template::class,
-        'Twig' => Groot\Facades\Twig::class,
-        'PluginVariable' => Groot\Facades\PluginVariable::class,
+        'Stats' => Kilvin\Facades\Stats::class,
+        'Cp' => Kilvin\Facades\Cp::class,
+        'Site' => Kilvin\Facades\Site::class,
+        'Plugins' => Kilvin\Facades\Plugins::class,
+        'Template' => Kilvin\Facades\Template::class,
+        'Twig' => Kilvin\Facades\Twig::class,
+        'PluginVariable' => Kilvin\Facades\PluginVariable::class,
     ],
 
 ];

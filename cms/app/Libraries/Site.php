@@ -1,13 +1,13 @@
 <?php
 
-namespace Groot\Libraries;
+namespace Kilvin\Libraries;
 
 use DB;
 use Cache;
 use Plugins;
 use Carbon\Carbon;
-use Groot\Core\Session;
-use Groot\Exceptions\CmsFailureException;
+use Kilvin\Core\Session;
+use Kilvin\Exceptions\CmsFailureException;
 
 /**
  * Site Data and Functionality

@@ -1,6 +1,6 @@
 <?php
 
-namespace Groot\Libraries\Twig\Templates;
+namespace Kilvin\Libraries\Twig\Templates;
 
 use DB;
 use Plugins;
@@ -66,7 +66,7 @@ class PluginVariable
                 throw new \Twig_Error(sprintf('The %s Plugin does not exist or is not installed.', $plugin_name));
             }
 
-            $class = '\Groot\Plugins\\'.$plugin->plugin_name.'\\Templates\\Elements\\'.$element;
+            $class = '\Kilvin\Plugins\\'.$plugin->plugin_name.'\\Templates\\Elements\\'.$element;
 
             if ( ! class_exists($class)) {
                 throw new \Twig_Error(sprintf('The %s Plugin does not have an Element named %s.', $plugin->plugin_name, $element));
@@ -77,7 +77,7 @@ class PluginVariable
 
 
         foreach(Plugins::list() as $plugin) {
-            $class = '\Groot\Plugins\\'.$plugin->plugin_name.'\\Templates\\Elements\\'.$element;
+            $class = '\Kilvin\Plugins\\'.$plugin->plugin_name.'\\Templates\\Elements\\'.$element;
 
             if (class_exists($class)) {
                 return $class;
@@ -114,7 +114,7 @@ class PluginVariable
 					return new class {
 						function title()
 						{
-							return 'Welcome to Groot CMS!';
+							return 'Welcome to Kilvin CMS!';
 						}
 					};
 				}
@@ -131,7 +131,7 @@ class PluginVariable
                                     'entry_date' => Carbon::now()->subHours(rand(1,5))->subMinutes(rand(1,30))
                                 ],
                                 [
-                                    'title' => 'Welcome to Groot CMS!',
+                                    'title' => 'Welcome to Kilvin CMS!',
                                     'slug'  => 'welcome_to_groot_cms',
                                     'content' => PluginVariable::latin(),
                                     'entry_date' => Carbon::now()->subDays(rand(1,5))->subHours(rand(1,5))->subMinutes(rand(1,30))
@@ -159,7 +159,7 @@ class PluginVariable
             return $plugin_name == $item->plugin_name;
         });
 
-        $class = '\Groot\Plugins\\'.$plugin->plugin_name.'\\Tags';
+        $class = '\Kilvin\Plugins\\'.$plugin->plugin_name.'\\Tags';
 
         if ( ! class_exists($class)) {
             throw new \Twig_Error(sprintf('The %s Plugin does not exist or is not installed.', $plugin->plugin_name));

@@ -1,5 +1,5 @@
 <?php
-namespace Groot\Plugins\Weblogs;
+namespace Kilvin\Plugins\Weblogs;
 
 use DB;
 

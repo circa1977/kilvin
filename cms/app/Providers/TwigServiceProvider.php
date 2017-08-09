@@ -1,17 +1,17 @@
 <?php
 
-namespace Groot\Providers;
+namespace Kilvin\Providers;
 
 use Site;
-use Groot\Libraries\Twig;
-use Groot\Libraries\TwigPlugins;
+use Kilvin\Libraries\Twig;
+use Kilvin\Libraries\TwigPlugins;
 use Illuminate\View\ViewServiceProvider;
 use InvalidArgumentException;
 use Twig_Loader_Chain;
 use Twig_Loader_Array;
 
 /**
- * Groot's Laravel Twig Service Provider
+ * Kilvin's Laravel Twig Service Provider
  */
 class TwigServiceProvider extends ViewServiceProvider
 {
@@ -83,7 +83,7 @@ class TwigServiceProvider extends ViewServiceProvider
     protected function registerCommands()
     {
         $this->app->bindIf('command.twig.clean', function () {
-            return new \Groot\Console\Commands\Twig\Clean;
+            return new \Kilvin\Console\Commands\Twig\Clean;
         });
 
         $this->commands('command.twig.clean');
@@ -230,7 +230,7 @@ class TwigServiceProvider extends ViewServiceProvider
         );
 
         $this->app->alias('cms.twig', 'Twig_Environment');
-        $this->app->alias('cms.twig', 'Groot\Libraries\Twig\Environment');
+        $this->app->alias('cms.twig', 'Kilvin\Libraries\Twig\Environment');
 
         $this->app->bindIf('cms.twig.compiler', function () {
             return new Twig\Compiler($this->app['cms.twig']);

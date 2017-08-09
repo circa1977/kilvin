@@ -19,7 +19,7 @@ return [
     'environment' => [
 
         // The base template class to use for generated templates.
-        'base_template_class' => 'Groot\Libraries\Twig\Template',
+        'base_template_class' => 'Kilvin\Libraries\Twig\Template',
 
         // Set to false to disable caching.
         'cache' => true,
@@ -67,9 +67,9 @@ return [
     'extensions' => [
 
         // Easily disable all Facades, Filters, and Functions by commenting these out
-        'Groot\Libraries\Twig\Loaders\Facades',
-        'Groot\Libraries\Twig\Loaders\Filters',
-        'Groot\Libraries\Twig\Loaders\Functions',
+        'Kilvin\Libraries\Twig\Loaders\Facades',
+        'Kilvin\Libraries\Twig\Loaders\Filters',
+        'Kilvin\Libraries\Twig\Loaders\Functions',
 
         // Feel free to add your own!
         // 'External\Plugins\Hope\Twig\FunExtension'
@@ -180,8 +180,8 @@ return [
     |
     */
     'filters' => [
-        'daysAgo' => ['callback' => '\Groot\Core\Localize@daysAgo'],
-        'relativeDate' => ['callback' => '\Groot\Core\Localize@relativeDate']
+        'daysAgo' => ['callback' => '\Kilvin\Core\Localize@daysAgo'],
+        'relativeDate' => ['callback' => '\Kilvin\Core\Localize@relativeDate']
 
     ]
 ];

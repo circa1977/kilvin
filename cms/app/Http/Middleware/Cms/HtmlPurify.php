@@ -1,6 +1,6 @@
 <?php
 
-namespace Groot\Http\Middleware\Cms;
+namespace Kilvin\Http\Middleware\Cms;
 
 use File;
 use Illuminate\Foundation\Http\Middleware\TransformsRequest;

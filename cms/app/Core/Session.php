@@ -1,6 +1,6 @@
 <?php
 
-namespace Groot\Core;
+namespace Kilvin\Core;
 
 use Carbon\Carbon;
 use DB;
@@ -8,7 +8,7 @@ use Auth;
 use Site;
 use Cache;
 use Request;
-use Groot\Exceptions\CmsFatalException;
+use Kilvin\Exceptions\CmsFatalException;
 
 class Session
 {
@@ -416,7 +416,7 @@ class Session
     public static function access($which)
     {
         if (empty($which)) {
-            throw new Groot\Exceptions\CmsFailureException('You attempted to check the access on nothing.');
+            throw new Kilvin\Exceptions\CmsFailureException('You attempted to check the access on nothing.');
         }
 
         // Super Admins always have access

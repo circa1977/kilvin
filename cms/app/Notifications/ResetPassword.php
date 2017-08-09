@@ -1,6 +1,6 @@
 <?php
 
-namespace Groot\Notifications;
+namespace Kilvin\Notifications;
 
 use Site;
 use Illuminate\Bus\Queueable;

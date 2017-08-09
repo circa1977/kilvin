@@ -1,6 +1,6 @@
 <?php
 
-namespace Groot\Plugins\Members;
+namespace Kilvin\Plugins\Members;
 
 use DB;
 

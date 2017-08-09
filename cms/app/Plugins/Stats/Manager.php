@@ -1,6 +1,6 @@
 <?php
 
-namespace Groot\Plugins\Stats;
+namespace Kilvin\Plugins\Stats;
 
 use Carbon\Carbon;
 use DB;
