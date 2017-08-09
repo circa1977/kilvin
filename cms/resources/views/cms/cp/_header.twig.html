@@ -1,0 +1,84 @@
+
+
+<div class="pageHeader">
+
+    <div class="quickLinks">
+        <div class="quickLinksLeft">
+            <div class="simpleHeader"><a href="admin.php">{{site_name}}</a></div>
+        </div>
+
+        <div class="quickLinksRight">
+            <a href="admin.php?C=myaccount&M=quicklinks&id=1" title="Edit Quicklinks" style="color:#ff0000">✎ edit</a>
+                &nbsp;&nbsp;&nbsp;
+                <span class="spacer">|</span>
+                &nbsp;&nbsp;&nbsp;
+            <a href="{{site_url}}">View Site</a>
+                &nbsp;&nbsp;&nbsp;
+                <span class="spacer">|</span>
+                &nbsp;&nbsp;&nbsp;
+            <a href="admin.php?C=myaccount"><span class="account-image">
+    <svg class="svg-icon" viewBox="0 0 20 20">
+        <path d="M12.075,10.812c1.358-0.853,2.242-2.507,2.242-4.037c0-2.181-1.795-4.618-4.198-4.618S5.921,4.594,5.921,6.775c0,1.53,0.884,3.185,2.242,4.037c-3.222,0.865-5.6,3.807-5.6,7.298c0,0.23,0.189,0.42,0.42,0.42h14.273c0.23,0,0.42-0.189,0.42-0.42C17.676,14.619,15.297,11.677,12.075,10.812 M6.761,6.775c0-2.162,1.773-3.778,3.358-3.778s3.359,1.616,3.359,3.778c0,2.162-1.774,3.778-3.359,3.778S6.761,8.937,6.761,6.775 M3.415,17.69c0.218-3.51,3.142-6.297,6.704-6.297c3.562,0,6.486,2.787,6.705,6.297H3.415z"></path>
+    </svg>
+</span>&nbsp;Account</a>
+                &nbsp;&nbsp;&nbsp;
+                <span class="spacer">|</span>
+                &nbsp;&nbsp;&nbsp;
+            <a href="admin.php?C=logout">Log-out</a>
+        </div>
+    </div>
+
+    <table border="0" cellspacing="0" cellpadding="0" style="width:100%;">
+        <tbody>
+            <tr>
+                <td class="mainMenuTab" style="width:2%;">
+                    &nbsp;
+                </td>
+                <td class="mainMenuTab" width="13%">
+                    <a href="admin.php?C=Sites" class="tabInactive" onclick="dropMenuSwitch(event);">Sites&nbsp;▾</a>
+                    <ul class="tabDropMenu">
+                        <li class="tabDropMenuInner">
+                            <a href="admin.php?C=Sites&site_id=1" title="Development Site">Development Site</a>
+                        </li>
+                        <li class="tabDropMenuInner">
+                            <a href="admin.php?C=SitesAdministration&M=listSites" title="Edit Sites"><em>»&nbsp;Edit Sites</em></a>
+                        </li>
+                    </ul>
+                </td>
+
+                <td class="mainMenuTab" width="13%">
+                    <a href="admin.php?C=publish" class="tabInactive" onclick="dropMenuSwitch(event);">Publish</a>
+                    <ul class="tabDropMenu">
+                        <li class="tabDropMenuInner">
+                            <a href="admin.php?C=publish&M=entry_form&weblog_id=1" title="Default Site Weblog">Default Site Weblog</a>
+                        </li>
+                        <li class="tabDropMenuInner">
+                            <a href="admin.php?C=admin&M=blog_admin&P=blog_list" title="Edit Weblogs"><em>»&nbsp;Edit Weblogs</em></a>
+                        </li>
+                    </ul>
+                </td>
+
+                <td class="mainMenuTab" width="13%">
+                    <a href="admin.php?C=edit" class="tabInactive">Edit</a>
+                </td>
+
+                <td class="mainMenuTab" width="13%">
+                    <a href="admin.php?C=templates" class="tabInactive">Templates</a>
+                </td>
+                <td class="mainMenuTab" width="13%">
+                    <a href="admin.php?C=plugins" class="tabInactive">Plugins</a>
+                </td>
+                <td class="mainMenuTab" width="13%">
+                    <a href="admin.php?C=admin" class="tabInactive">Administration</a>
+                </td>
+                <td class="mainMenuTab" width="2%">
+                    <a href="admin.php?C=myaccount&M=tab_manager" class="tabInactive">+</a>
+                </td>
+                <td class="mainMenuTab" style="width:2%;">
+                    &nbsp;
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+

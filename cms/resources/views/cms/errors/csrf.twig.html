@@ -1,0 +1,8 @@
+
+{% extends "errors.error" %}
+{% set error_name = 'Invalid Form Submission Token' %}
+
+{% block error_message %}
+	<p>Oops! Your form submission failed because of a missing or invalid CSRF token.</p>
+	<p>Please go back, reload the form and try again.</p>
+{% endblock error_message %}

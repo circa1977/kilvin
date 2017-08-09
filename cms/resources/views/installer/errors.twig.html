@@ -1,0 +1,30 @@
+
+
+{% extends "_page" %}
+
+{% block mainContent %}
+	<h1>Unable to Install Groot CMS</h1>
+
+    <p>Groot CMS has specific server requirements and unfortunately your server did not meet them. Below is a list of the problems we discovered
+    when we ran some of our installation tests.
+    If you have questions, please refer to the
+        <a href="https://grootcms.com/docs">documentation</a>
+        or
+        <a href="https://grootcms.com/support">contact support</a>.
+    </p>
+
+    <h2 class="error">Errors</h2>
+
+    <ul class="errorsList">
+        {% for error in errors %}
+            <li>
+                <h3>{{error[0]}}</h3>
+
+                <p>{{error[1] | raw}}</p>
+
+            </li>
+        {% endfor %}
+    </ul>
+
+
+{% endblock %}

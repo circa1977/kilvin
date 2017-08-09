@@ -1,0 +1,14 @@
+/node_modules
+/vendor
+/.vagrant
+Homestead.json
+Homestead.yaml
+npm-debug.log
+.env
+tasks.txt
+.DS_Store
+/cms/vendor
+/cms/storage
+/cms/config/cms.php
+/public/images/uploads
+/_ref

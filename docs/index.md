@@ -19,29 +19,17 @@ Groot CMS is a content management system built on top of the [Laravel framework]
 
 ### Installation
 
- - Insure you have a server meeting the above requirements. [Laravel Homestead](https://laravel.com/docs/5.4/homestead) is a superb development environment for Groot CMS.
- - Clone this GitHub repo onto your server.
- - Configure your web server's document / web root to be the ./public directory.
- - Run the following [Composer](https://getcomposer.org) command to install Groot's code dependencies: `composer install --no-interaction --prefer-dist --optimize-autoloader`.
- - Until I make this public and can make this a Composer package, run these commands:
-   - `cp .env.example .env`
-   - `php cms/artisan key:generate`
- - Permissions. Insure that the following files and directories are writeable on your server. Homestead is set up to allow this automatically:
+ - Insure you have a server meeting the above requirements. Set up your new site on the server. [Laravel Homestead](https://laravel.com/docs/5.4/homestead) is a superb development environment for Groot CMS.
+ - Pull down the GitHub files into your site's directory on the server. The 'public/' directory is the root of your public site.
+ - Permissions. Insure that the following files and directories are writeable on your server:
    - .env
    - cms/config/cms.php
    - cms/storage
    - cms/templates
    - public/images
  - Create a database for your new site in MySQL
+ - Run the following [Composer](https://getcomposer.org) command from within the 'cms' folder: `composer install --no-interaction --prefer-dist --optimize-autoloader`.  It installs all the code dependencies that Groot CMS requires.
  - Direct your browser to the install.php file on your new site. Example: http://mysite.com/install.php
-
-
-## Multiple Sites
-
- - Weblogs, Fields, Categories, Statuses, Member Groups, Members, and most preferences are CMS-specific
- - Templates, Pages, and Stats are Site-specific
- - Member Groups can have access to certain site's in the CP, allowing them to access only those sites' Templates and Pages
- - Weblog access is done on the group level.
 
 
 ## Groot CMS Sponsors
