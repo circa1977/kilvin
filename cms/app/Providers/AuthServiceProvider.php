@@ -1,6 +1,6 @@
 <?php
 
-namespace Groot\Providers;
+namespace Kilvin\Providers;
 
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;

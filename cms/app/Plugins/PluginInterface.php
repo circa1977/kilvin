@@ -1,6 +1,6 @@
 <?php
 
-namespace Groot\Plugins;
+namespace Kilvin\Plugins;
 
 interface PluginInterface
 {

@@ -1,12 +1,12 @@
 <?php
 
-namespace Groot\Http\Middleware\Cms;
+namespace Kilvin\Http\Middleware\Cms;
 
 use Site;
 use Request;
 use Closure;
 use Carbon\Carbon;
-use Groot\Core\Session;
+use Kilvin\Core\Session;
 use Illuminate\Http\Response;
 use Illuminate\Container\Container;
 use Illuminate\Routing\RouteDependencyResolverTrait;
@@ -28,7 +28,7 @@ class CmsSession
         }
 
         // ----------------------------------------------
-        //  Instantiate Groot Session Data
+        //  Instantiate Kilvin Session Data
         // ----------------------------------------------
 
         Session::boot();

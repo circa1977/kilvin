@@ -30,17 +30,17 @@ $app->useEnvironmentPath(__DIR__.'/../../');
 
 $app->singleton(
     Illuminate\Contracts\Http\Kernel::class,
-    Groot\Http\Kernel::class
+    Kilvin\Http\Kernel::class
 );
 
 $app->singleton(
     Illuminate\Contracts\Console\Kernel::class,
-    Groot\Console\Kernel::class
+    Kilvin\Console\Kernel::class
 );
 
 $app->singleton(
     Illuminate\Contracts\Debug\ExceptionHandler::class,
-    Groot\Exceptions\Handler::class
+    Kilvin\Exceptions\Handler::class
 );
 
 /*

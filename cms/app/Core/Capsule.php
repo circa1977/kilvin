@@ -1,6 +1,6 @@
 <?php
 
-namespace Groot\Core;
+namespace Kilvin\Core;
 
 use Illuminate\Database\Capsule\Manager as IlluminateCapsule;
 use Illuminate\Events\Dispatcher;

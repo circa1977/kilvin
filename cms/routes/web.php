@@ -14,10 +14,10 @@
 
 /*
 |--------------------------------------------------------------------------
-| Groot CMS Routes
+| Kilvin CMS Routes
 |--------------------------------------------------------------------------
 |
-| These routes trigger the Groot CMS functionality. If you want your own
+| These routes trigger the Kilvin CMS functionality. If you want your own
 | application routes that do NOT trigger the CMS, put them above this point.
 */
 

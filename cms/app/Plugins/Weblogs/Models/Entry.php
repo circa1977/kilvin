@@ -1,6 +1,6 @@
 <?php
 
-namespace Groot\Plugins\Weblogs\Models;
+namespace Kilvin\Plugins\Weblogs\Models;
 
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;

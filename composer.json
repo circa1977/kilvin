@@ -1,6 +1,6 @@
 {
     "name": "reedmaniac/groot-cms",
-    "description": "The Groot CMS.",
+    "description": "The Kilvin CMS.",
     "keywords": ["cms", "laravel"],
     "license": "MIT",
     "type": "project",
@@ -27,7 +27,7 @@
             "cms/app/helpers.php"
         ],
         "psr-4": {
-            "Groot\\": "cms/app/"
+            "Kilvin\\": "cms/app/"
         }
     },
     "autoload-dev": {

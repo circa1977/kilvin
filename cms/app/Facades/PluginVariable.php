@@ -1,6 +1,6 @@
 <?php
 
-namespace Groot\Facades;
+namespace Kilvin\Facades;
 
 use Illuminate\Support\Facades\Facade;
 

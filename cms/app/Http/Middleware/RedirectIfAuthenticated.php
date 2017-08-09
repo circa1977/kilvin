@@ -1,6 +1,6 @@
 <?php
 
-namespace Groot\Http\Middleware;
+namespace Kilvin\Http\Middleware;
 
 use Closure;
 use Illuminate\Support\Facades\Auth;

@@ -30,7 +30,7 @@ return [
     ],
 
     'stripe' => [
-        'model' => Groot\Models\Member::class,
+        'model' => Kilvin\Models\Member::class,
         'key' => env('STRIPE_KEY'),
         'secret' => env('STRIPE_SECRET'),
     ],

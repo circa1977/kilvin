@@ -1,12 +1,12 @@
 <?php
 
-namespace Groot\Http\ViewComposers;
+namespace Kilvin\Http\ViewComposers;
 
 use DB;
 use Auth;
 use Site;
 use Cache;
-use Groot\Core\Session;
+use Kilvin\Core\Session;
 use Illuminate\View\View;
 
 class Cp

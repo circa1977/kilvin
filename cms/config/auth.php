@@ -67,7 +67,7 @@ return [
     'providers' => [
 		'users' => [
 			'driver' => 'eloquent',
-			'model' => Groot\Models\Member::class,
+			'model' => Kilvin\Models\Member::class,
 		],
 
 		// 'users' => [

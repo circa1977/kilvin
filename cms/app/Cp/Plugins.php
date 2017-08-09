@@ -1,12 +1,12 @@
 <?php
 
-namespace Groot\Cp;
+namespace Kilvin\Cp;
 
 use Cp;
 use DB;
 use Request;
-use Groot\Core\Session;
-use Groot\Exceptions\CmsFatalException;
+use Kilvin\Core\Session;
+use Kilvin\Exceptions\CmsFatalException;
 
 class Plugins
 {
@@ -233,7 +233,7 @@ class Plugins
     {
         $plugin = filename_security($plugin);
 
-        $class = '\\Groot\\Plugins\\'.$plugin.'\\Manager';
+        $class = '\\Kilvin\\Plugins\\'.$plugin.'\\Manager';
         $third_paty_path = CMS_PATH_THIRD_PARTY.$plugin.DIRECTORY_SEPARATOR.'Manager.php';
 
         // Not native?
@@ -264,7 +264,7 @@ class Plugins
     {
         $plugin = filename_security($plugin);
 
-        $class = '\\Groot\\Plugins\\'.$plugin.'\\ControlPanel';
+        $class = '\\Kilvin\\Plugins\\'.$plugin.'\\ControlPanel';
         $third_paty_path = CMS_PATH_THIRD_PARTY.$plugin.DIRECTORY_SEPARATOR.'ControlPanel.php';
 
         // Not native?

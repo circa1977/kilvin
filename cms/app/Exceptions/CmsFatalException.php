@@ -1,6 +1,6 @@
 <?php
 
-namespace Groot\Exceptions;
+namespace Kilvin\Exceptions;
 
 use Exception;
 

@@ -1,10 +1,10 @@
 <?php
 
-namespace Groot\Providers;
+namespace Kilvin\Providers;
 
 use Request;
 use Carbon\Carbon;
-use Groot\Libraries;
+use Kilvin\Libraries;
 use Illuminate\Support\ServiceProvider;
 
 class CmsServiceProvider extends ServiceProvider
@@ -17,7 +17,7 @@ class CmsServiceProvider extends ServiceProvider
     public function register()
     {
         if (defined('REQUEST') && REQUEST === 'CP') {
-            view()->composer('*', 'Groot\Http\ViewComposers\Cp');
+            view()->composer('*', 'Kilvin\Http\ViewComposers\Cp');
         }
 
         $this->app->singleton('cms.statistics', function () {
@@ -109,7 +109,7 @@ class CmsServiceProvider extends ServiceProvider
         // ----------------------------------------------
 
         if (REQUEST == 'INSTALL') {
-            $installer = new \Groot\Cp\Installer($cms_folder, $system_path);
+            $installer = new \Kilvin\Cp\Installer($cms_folder, $system_path);
             exit($installer->run());
         }
 

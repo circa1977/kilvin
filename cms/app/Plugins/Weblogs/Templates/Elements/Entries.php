@@ -1,9 +1,9 @@
 <?php
 
-namespace Groot\Plugins\Weblogs\Templates\Elements;
+namespace Kilvin\Plugins\Weblogs\Templates\Elements;
 
-use Groot\Libraries\Twig\Templates\Element as TemplateElement;
-use Groot\Plugins\Weblogs\Models\Entry as BaseModel;
+use Kilvin\Libraries\Twig\Templates\Element as TemplateElement;
+use Kilvin\Plugins\Weblogs\Models\Entry as BaseModel;
 use Illuminate\Database\Eloquent\Builder;
 
 class Entries extends BaseModel implements \IteratorAggregate

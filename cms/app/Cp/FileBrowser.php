@@ -1,6 +1,6 @@
 <?php
 
-namespace Groot\Cp;
+namespace Kilvin\Cp;
 
 class FileBrowser {
 

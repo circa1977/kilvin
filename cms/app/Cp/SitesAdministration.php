@@ -1,6 +1,6 @@
 <?php
 
-namespace Groot\Cp;
+namespace Kilvin\Cp;
 
 use Cp;
 use DB;
@@ -13,7 +13,7 @@ use Storage;
 use Request;
 use Validator;
 use Carbon\Carbon;
-use Groot\Core\Session;
+use Kilvin\Core\Session;
 
 class SitesAdministration
 {

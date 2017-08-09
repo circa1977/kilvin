@@ -1,6 +1,6 @@
 <?php
 
-namespace Groot\Http\Controllers\Cp;
+namespace Kilvin\Http\Controllers\Cp;
 
 use Illuminate\Http\Request;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
