@@ -1,4 +1,7 @@
 
+<p align="center"><img src="https://arliden.com/images/kilvin-icon-small.png"></p>
+
+
 # Kilvin CMS
 
 ## About Kilvin
