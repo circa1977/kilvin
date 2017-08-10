@@ -4,13 +4,13 @@
 
 {% block main_content %}
 
-	{% for entry in Plugins.Element('Entries').with('entryData').mostRecent(5) %}
+	{% for entry in Plugins.Element('Entries').with('fields').mostRecent(5) %}
 		<article class="entry">
 
 	        <header class="entry-header">
 
 	            <h2 class="entry-title">
-	                <a href="{{ entry.url_title }}" title="">{{ entry.title }}</a>
+	                <a href="{{ entry.url_title }}" title="">{{ entry.fields.title }}</a>
 	            </h2>
 
 	            <div class="entry-meta">
@@ -35,7 +35,7 @@
 	        </header>
 
 	        <div class="entry-content">
-	            {{ entry.fields.body }}
+	            {{ entry.fields.field_body }}
 	        </div>
 
 	    </article> <!-- end entry -->

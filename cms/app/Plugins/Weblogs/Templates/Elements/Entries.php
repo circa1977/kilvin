@@ -42,33 +42,33 @@ class Entries extends BaseModel implements \IteratorAggregate
      *
      * @return object
      */
-    public function getFields($name = '')
-    {
-    	if (!empty($name)) {
-    		return 'My Field: '.$name;
-    	}
+    // public function getFields($name = '')
+    // {
+    // 	if (!empty($name)) {
+    // 		return 'My Field: '.$name;
+    // 	}
 
-    	return new class($this->entryData)
-    	{
-    		public $entryData;
+    // 	return new class($this->entryData)
+    // 	{
+    // 		public $entryData;
 
-    		public function __construct($entryData)
-    		{
-    			$this->entryData = $entryData;
-    		}
+    // 		public function __construct($entryData)
+    // 		{
+    // 			$this->entryData = $entryData;
+    // 		}
 
-    		/**
-		     * Dynamically retrieve attributes on the model.
-		     *
-		     * @param  string  $key
-		     * @return mixed
-		     */
-		    public function __call($one, $two)
-		    {
-		        return 'My Field: '.$one;
-		    }
-    	};
-    }
+    // 		/**
+		  //    * Dynamically retrieve attributes on the model.
+		  //    *
+		  //    * @param  string  $key
+		  //    * @return mixed
+		  //    */
+		  //   public function __call($one, $two)
+		  //   {
+		  //       return 'My Field: '.$one;
+		  //   }
+    // 	};
+    // }
 }
 
 

@@ -24,7 +24,7 @@ class Entry extends Model
     /**
      * Get the fields data associated with this Entry
      */
-    public function entryData()
+    public function fields()
     {
         return $this->hasOne(EntryData::class, 'entry_id', 'entry_id');
     }
