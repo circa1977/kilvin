@@ -1,8 +1,12 @@
 
 
-{% extends "cp._page" %}
+{% extends "_page" %}
 
-{% set page_name = title %}
+{% if title is defined %}
+	{% set page_name = title %}
+{% else %}
+	{% set page_name = 'Error!' %}
+{% endif %}
 
 {% block mainContent %}
 
