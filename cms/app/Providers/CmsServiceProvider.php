@@ -103,6 +103,10 @@ class CmsServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        $cms_folder  = config('cms.cms_folder', 'cms');
+        $system_path = base_path().DIRECTORY_SEPARATOR;
+        $app_path    = $system_path.'app'.DIRECTORY_SEPARATOR;
+
         // ----------------------------------------------
         //  Installer?
         //  - Separate, simpler application
