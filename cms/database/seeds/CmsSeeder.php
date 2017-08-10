@@ -577,28 +577,28 @@ This entry contains helpful resources to help you get the most from Kilvin CMS a
 
 Community technical support is handled through our Slack Channel.
 Our community is full of knowledgeable and helpful people that will often reply quickly to your technical questions.
-Please review the <a href="https://grootcms.com/docs/support.html">Support</a> section
+Please review the <a href="https://arliden.com/docs/support.html">Support</a> section
 of our User Guide before posting in Slack.
 
 
 <h3>Premium Support:</h3>
 
-With our <a href="https://grootcms.com/premium-support">support subscriptions</a>
+With our <a href="https://arliden.com/premium-support">support subscriptions</a>
 you can receive premium support for Kilvin CMS from the maintainers of the code.
 
 Get help on how to best begin your development process, how to organise your team of developers
 working on the same project for maximum productivity, and answers to prompt, in-depth
 answers to your technical questions from the experts.
 
-Please review our <a href="https://grootcms.com/premium-support">Premium Support</a> page for additional information.
+Please review our <a href="https://arliden.com/premium-support">Premium Support</a> page for additional information.
 
 
 <h3>Learning and support resources:</h3>
 
-<a href="https://grootcms.com/getting_started.html">Getting Started Guide</a>
-<a href="https://grootcms.com/quick_start.html">Quick Start Tutorial</a>
-<a href="https://grootcms.com/docs/">Kilvin CMS - Documentation</a>
-<a href="https://grootcms.com/faq/">Kilvin CMS - FAQ</a>
+<a href="https://arliden.com/getting_started.html">Getting Started Guide</a>
+<a href="https://arliden.com/quick_start.html">Quick Start Tutorial</a>
+<a href="https://arliden.com/docs/">Kilvin CMS - Documentation</a>
+<a href="https://arliden.com/faq/">Kilvin CMS - FAQ</a>
 
 
 Love Kilvin CMS? Please tell your friends and professionals associates.
