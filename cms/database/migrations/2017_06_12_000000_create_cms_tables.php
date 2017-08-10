@@ -550,6 +550,7 @@ class CreateCmsTables extends Migration
         $D[] = 'members';
         $D[] = 'member_homepage';
         $D[] = 'member_groups';
+        $D[] = 'member_group_preferences';
         $D[] = 'member_fields';
         $D[] = 'member_data';
         $D[] = 'weblogs';
