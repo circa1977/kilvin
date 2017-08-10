@@ -3,15 +3,15 @@
 
 ## About Kilvin
 
-Kilvin CMS is a content management system built on top of the [Laravel framework](https://laravel.com). More details will be forthcoming (like documentation!) just as soon as I finish the darn thing.
+Kilvin CMS is a content management system built on top of the [Laravel framework](https://laravel.com). The project is currently in a development state and is not ready for production-usage. We do not suggest using this for websites at this time since major architectural changes are still possible, which could break existing functionality.
 
 
 ## Installing Kilvin CMS
 
 ### Server Requirements
  - PHP 7.0 or later with safe mode disabled
- - MySQL 5.5.0 or later, with the InnoDB storage engine installed
- - A web server (Apache, Nginx, IIS)
+ - MySQL 5.5.0 or later, with the InnoDB storage engine installed. MariaDB works too.
+ - A web server (Apache, Nginx)
  - OpenSSL PHP Extension
  - PDO PHP Extension
  - Mbstring PHP Extension
@@ -21,9 +21,8 @@ Kilvin CMS is a content management system built on top of the [Laravel framework
 
  - Insure you have a server meeting the above requirements. [Laravel Homestead](https://laravel.com/docs/5.4/homestead) is a superb development environment for Kilvin CMS.
  - Clone this GitHub repo onto your server.
- - Configure your web server's document / web root to be the ./public directory.
  - Run the following [Composer](https://getcomposer.org) command to install Kilvin's code dependencies: `composer install --no-interaction --prefer-dist --optimize-autoloader`.
- - Until I make this public and can make this a Composer package, run these commands:
+ - For the time being, run these commands manually:
    - `cp .env.example .env`
    - `php cms/artisan key:generate`
  - Permissions. Insure that the following files and directories are writeable on your server. Homestead is set up to allow this automatically:
@@ -32,16 +31,16 @@ Kilvin CMS is a content management system built on top of the [Laravel framework
    - cms/storage
    - cms/templates
    - public/images
- - Create a database for your new site in MySQL
- - Direct your browser to the install.php file on your new site. Example: http://mysite.com/install.php
+ - Create a database for your new site in MySQL/MariaDB.
+ - Configure your webserver to make the `./public` directory your web root.
+ - Direct your browser to the install.php file on your new site and run the installer. Example: http://mysite.com/install.php
 
 
 ## Multiple Sites
 
- - Weblogs, Fields, Categories, Statuses, Member Groups, Members, and most preferences are CMS-specific
- - Templates, Pages, and Stats are Site-specific
- - Member Groups can have access to certain site's in the CP, allowing them to access only those sites' Templates and Pages
- - Weblog access is done on the group level.
+ - Weblogs, Fields, Categories, Statuses, Member Groups, Members, and most preferences are global and NOT site-specific
+ - Templates and Stats are Site-specific
+ - Member Groups have permissions that allow you to restrict them to only certain Sites, Weblogs, and Statuses
 
 
 ## Kilvin CMS Sponsors
