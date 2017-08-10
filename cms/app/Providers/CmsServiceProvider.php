@@ -103,18 +103,21 @@ class CmsServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $cms_folder  = config('cms.cms_folder', 'cms');
-        $system_path = base_path().DIRECTORY_SEPARATOR;
-        $app_path    = $system_path.'app'.DIRECTORY_SEPARATOR;
+        // ----------------------------------------------
+        //  App Debugging
+        // ----------------------------------------------
+
+        if (config('app.debug') == true) {
+            error_reporting(E_ALL);
+        }
 
         // ----------------------------------------------
         //  Installer?
-        //  - Separate, simpler application
+        //  - Stop here, no need to check if system is on
         // ----------------------------------------------
 
         if (REQUEST == 'INSTALL') {
-            $installer = new \Kilvin\Cp\Installer($cms_folder, $system_path);
-            exit($installer->run());
+            return;
         }
 
         // ----------------------------------------------
@@ -123,14 +126,6 @@ class CmsServiceProvider extends ServiceProvider
 
         if ( config()->get('cms.is_system_on') === null) {
             exit(CMS_NAME." does not appear to be installed.");
-        }
-
-        // ----------------------------------------------
-        //  App Debugging
-        // ----------------------------------------------
-
-        if (config('app.debug') == true) {
-            error_reporting(E_ALL);
         }
     }
 }

@@ -34,6 +34,10 @@ class SiteServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        if (defined('REQUEST') && REQUEST === 'INSTALL') {
+            return;
+        }
+
         // ----------------------------------------------
         //  Set Site Preferences class
         // ----------------------------------------------

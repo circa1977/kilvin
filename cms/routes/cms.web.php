@@ -26,5 +26,9 @@ Route::any('/{any}', function ($any='') {
     	$this->current->action['uses'] = 'Kilvin\Http\Controllers\Cp\Controller@all';
     }
 
+    if (REQUEST === 'INSTALL') {
+        $this->current->action['uses'] = 'Kilvin\Http\Controllers\InstallController@all';
+    }
+
     return $this->current->run();
 })->where('any', '.*');

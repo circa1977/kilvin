@@ -23,15 +23,15 @@ class CmsSession
      */
     public function handle($request, Closure $next, $guard = null)
     {
-        if (defined('REQUEST') && REQUEST === 'INSTALL') {
-            return;
-        }
-
         // ----------------------------------------------
         //  Instantiate Kilvin Session Data
         // ----------------------------------------------
 
         Session::boot();
+
+        if (defined('REQUEST') && REQUEST === 'INSTALL') {
+            return $next($request);
+        }
 
         // ----------------------------------------------
         //  If Site Debug is 1 and User is SuperAdmin, Debugging On
