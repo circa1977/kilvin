@@ -59,77 +59,77 @@ class CmsSeeder extends Seeder
 		//  Site - Template Group Templates
 		// -----------------------------------
 
-		require $this->theme_path;
+		// require $this->theme_path;
 
-		foreach ($template_matrix as $template)
-		{
-			$name = $template[0];
+		// foreach ($template_matrix as $template)
+		// {
+		// 	$name = $template[0];
 
-			DB::table('templates')
-				->insert(
-					[
-						'folder' => '/',
-						'template_name'  => $name,
-						'template_type'  => $template[1],
-						'template_data'  => $name(),
-						'updated_at'     => $now,
-						'last_author_id' => 1
-					]);
-		}
+		// 	DB::table('templates')
+		// 		->insert(
+		// 			[
+		// 				'folder' => '/',
+		// 				'template_name'  => $name,
+		// 				'template_type'  => $template[1],
+		// 				'template_data'  => $name(),
+		// 				'updated_at'     => $now,
+		// 				'last_author_id' => 1
+		// 			]);
+		// }
 
-		unset($template_matrix);
+		// unset($template_matrix);
 
-		// -----------------------------------
-		//  RSS/ATOM Templates
-		// -----------------------------------
+		// // -----------------------------------
+		// //  RSS/ATOM Templates
+		// // -----------------------------------
 
-		require $themes_path.'rss/rss.php';
+		// require $themes_path.'rss/rss.php';
 
-		DB::table('templates')
-			->insert(
-				[
-					'folder' => '/',
-					'template_name'  => 'atom',
-					'template_type'  => 'atom',
-					'template_data'  => atom(),
-					'updated_at'     => $now,
-					'last_author_id' => 1
-				]);
+		// DB::table('templates')
+		// 	->insert(
+		// 		[
+		// 			'folder' => '/',
+		// 			'template_name'  => 'atom',
+		// 			'template_type'  => 'atom',
+		// 			'template_data'  => atom(),
+		// 			'updated_at'     => $now,
+		// 			'last_author_id' => 1
+		// 		]);
 
-		DB::table('templates')
-			->insert(
-				[
-					'folder' => '/',
-					'template_name'  => 'rss',
-					'template_type'  => 'rss',
-					'template_data'  => rss_2(),
-					'updated_at'     => $now,
-					'last_author_id' => 1
-				]);
+		// DB::table('templates')
+		// 	->insert(
+		// 		[
+		// 			'folder' => '/',
+		// 			'template_name'  => 'rss',
+		// 			'template_type'  => 'rss',
+		// 			'template_data'  => rss_2(),
+		// 			'updated_at'     => $now,
+		// 			'last_author_id' => 1
+		// 		]);
 
-		unset($template_matrix);
+		// unset($template_matrix);
 
-		// -----------------------------------
-		//  Search Templates
-		// -----------------------------------
+		// // -----------------------------------
+		// //  Search Templates
+		// // -----------------------------------
 
-		require $themes_path.'search/search.php';
+		// require $themes_path.'search/search.php';
 
-		foreach ($template_matrix as $template)
-		{
-			$name = $template[0];
+		// foreach ($template_matrix as $template)
+		// {
+		// 	$name = $template[0];
 
-			DB::table('templates')
-				->insert(
-					[
-						'folder'    => '/search',
-						'template_name'  => ($name == 'search_index') ? 'index' : $name,
-						'template_type'  => $template[1],
-						'template_data'  => $name(),
-						'updated_at'     => $now,
-						'last_author_id' => 1
-					]);
-		}
+		// 	DB::table('templates')
+		// 		->insert(
+		// 			[
+		// 				'folder'    => '/search',
+		// 				'template_name'  => ($name == 'search_index') ? 'index' : $name,
+		// 				'template_type'  => $template[1],
+		// 				'template_data'  => $name(),
+		// 				'updated_at'     => $now,
+		// 				'last_author_id' => 1
+		// 			]);
+		// }
 
 		// --------------------------------------------------------------------
 		//  Default Weblog - Preferences, Fields, Statuses, Categories
@@ -142,16 +142,11 @@ class CmsSeeder extends Seeder
 				'blog_name'		 	    => 'default_site',
 				'blog_title' 		    => 'Default Site Weblog',
 				'blog_url' 			    => $this->data['site_url'].$this->data['site_index'].'/site/index/',
-				'comment_url' 		    => $this->data['site_url'].$this->data['site_index'].'/site/comments/',
 				'total_entries' 	    => 1,
 				'last_entry_date'       => $now,
 				'status_group'          => 1,
 				'default_status' 		     => 'open',
 				'field_group' 		         => 1,
-				'allow_comments_default'     => 'y',
-				'comment_max_chars'          => 5000,
-				'comment_require_email'      => 'y',
-				'comment_require_membership' => 'n',
 			]);
 
 		// Custom Fields
@@ -220,7 +215,7 @@ class CmsSeeder extends Seeder
 		foreach($prefs as $handle => $value) {
 			DB::table('member_group_preferences')
 				->insert([
-					'group_id'	=> 1
+					'group_id'	=> 1,
 					'handle' 	=> $handle,
 					'value'  	=> $value
 				]);
@@ -260,16 +255,8 @@ class CmsSeeder extends Seeder
 			'can_assign_post_authors'	 => 'n',
 			'can_delete_self_entries'	 => 'n',
 			'can_delete_all_entries'	 => 'n',
-			'can_view_other_comments'	 => 'n',
-			'can_edit_own_comments'		 => 'n',
-			'can_delete_own_comments'	 => 'n',
-			'can_edit_all_comments'		 => 'n',
-			'can_delete_all_comments'	 => 'n',
-			'can_moderate_comments'		 => 'n',
 			'can_delete_self'			 => 'n',
 			'mbr_delete_notify_emails'	 => '',
-			'can_post_comments'			 => 'n',
-			'exclude_from_moderation'	 => 'n',
 			'can_search'				 => 'n',
 			'search_flood_control'		 => 60,
 			'can_send_bulletins'			 => 'n',
@@ -282,7 +269,7 @@ class CmsSeeder extends Seeder
 		foreach($prefs as $handle => $value) {
 			DB::table('member_group_preferences')
 				->insert([
-					'group_id'	=> 2
+					'group_id'	=> 2,
 					'handle' 	=> $handle,
 					'value'  	=> $value
 				]);
@@ -322,16 +309,8 @@ class CmsSeeder extends Seeder
 			'can_assign_post_authors'	 => 'n',
 			'can_delete_self_entries'	 => 'n',
 			'can_delete_all_entries'	 => 'n',
-			'can_view_other_comments'	 => 'n',
-			'can_edit_own_comments'		 => 'n',
-			'can_delete_own_comments'	 => 'n',
-			'can_edit_all_comments'		 => 'n',
-			'can_delete_all_comments'	 => 'n',
-			'can_moderate_comments'		 => 'n',
 			'can_delete_self'			 => 'n',
 			'mbr_delete_notify_emails'	 => '',
-			'can_post_comments'			 => 'y',
-			'exclude_from_moderation'	 => 'n',
 			'can_search'				 => 'y',
 			'search_flood_control'		 => 15,
 			'can_send_bulletins'			 => 'n',
@@ -344,7 +323,7 @@ class CmsSeeder extends Seeder
 		foreach($prefs as $handle => $value) {
 			DB::table('member_group_preferences')
 				->insert([
-					'group_id'	=> 3
+					'group_id'	=> 3,
 					'handle' 	=> $handle,
 					'value'  	=> $value
 				]);
@@ -384,16 +363,8 @@ class CmsSeeder extends Seeder
 			'can_assign_post_authors'	 => 'n',
 			'can_delete_self_entries'	 => 'n',
 			'can_delete_all_entries'	 => 'n',
-			'can_view_other_comments'	 => 'n',
-			'can_edit_own_comments'		 => 'n',
-			'can_delete_own_comments'	 => 'n',
-			'can_edit_all_comments'		 => 'n',
-			'can_delete_all_comments'	 => 'n',
-			'can_moderate_comments'		 => 'n',
 			'can_delete_self'			 => 'n',
 			'mbr_delete_notify_emails'	 => '',
-			'can_post_comments'			 => 'y',
-			'exclude_from_moderation'	 => 'n',
 			'can_search'				 => 'y',
 			'search_flood_control'		 => 15,
 			'can_send_bulletins'			 => 'n',
@@ -406,7 +377,7 @@ class CmsSeeder extends Seeder
 		foreach($prefs as $handle => $value) {
 			DB::table('member_group_preferences')
 				->insert([
-					'group_id'	=> 4
+					'group_id'	=> 4,
 					'handle' 	=> $handle,
 					'value'  	=> $value
 				]);
@@ -445,16 +416,8 @@ class CmsSeeder extends Seeder
 			'can_assign_post_authors'	 => 'n',
 			'can_delete_self_entries'	 => 'n',
 			'can_delete_all_entries'	 => 'n',
-			'can_view_other_comments'	 => 'n',
-			'can_edit_own_comments'		 => 'n',
-			'can_delete_own_comments'	 => 'n',
-			'can_edit_all_comments'		 => 'n',
-			'can_delete_all_comments'	 => 'n',
-			'can_moderate_comments'		 => 'n',
 			'can_delete_self'			 => 'n',
 			'mbr_delete_notify_emails'	 => '',
-			'can_post_comments'			 => 'y',
-			'exclude_from_moderation'	 => 'n',
 			'can_search'				 => 'y',
 			'search_flood_control'		 => 10,
 			'can_send_bulletins'		 => 'n',
@@ -467,7 +430,7 @@ class CmsSeeder extends Seeder
 		foreach($prefs as $handle => $value) {
 			DB::table('member_group_preferences')
 				->insert([
-					'group_id'	=> 5
+					'group_id'	=> 5,
 					'handle' 	=> $handle,
 					'value'  	=> $value
 				]);
@@ -499,7 +462,6 @@ class CmsSeeder extends Seeder
 				[
 					'member_id' => 1,
 					'recent_entries_order' => 1,
-					'recent_comments_order' => 1,
 					'site_statistics_order' => 2,
 					'notepad_order' => 2,
 
@@ -555,7 +517,7 @@ class CmsSeeder extends Seeder
 				);
 		}
 
-		DB::table('cms_weblog_entry_categories')
+		DB::table('weblog_entry_categories')
 			->insert(
 				[
 					'entry_id' 		=> 1,
@@ -625,6 +587,7 @@ ENTRY;
 			[
 				'entry_id' 		 => 1,
 				'weblog_id'		 => 1,
+				'locale'		 => 'en_US',
 				'title'			 => 'Getting Started with Kilvin CMS',
 				'field_excerpt'  => '',
 				'field_body'	 => $body,

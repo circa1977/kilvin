@@ -223,7 +223,7 @@ class InstallController extends Controller
     function existingInstallForm()
     {
         $fields = '';
-        foreach($_POST as $key => $value)
+        foreach($this->request->all() as $key => $value)
         {
             $fields .= '<input
                 type="hidden"
@@ -279,8 +279,6 @@ class InstallController extends Controller
         config()->set('database.connections', $connections);
         config()->set('database.default', 'mysql');
 
-        require($this->system_path.'resources/language/'.$this->data['deft_lang'].'/email_data.php');
-
         // -----------------------------------
         //  Test DB Connection
         // -----------------------------------
@@ -296,11 +294,11 @@ class InstallController extends Controller
         //  Existing Install?
         // -----------------------------------
 
-        if ($sites_exists && ! isset($_POST['install_override']))
+        if ($sites_exists && ! $this->request->input('install_override'))
         {
             $fields = '';
 
-            foreach($_POST as $key => $value)
+            foreach($this->request->all() as $key => $value)
             {
                 if($key === '_token') {
                     continue;
@@ -424,7 +422,8 @@ class InstallController extends Controller
 
         if ( ! file_exists($themes_path.$this->data['template'].DIRECTORY_SEPARATOR.$this->data['template'].'.php'))
         {
-            $errors[] = "Error: Unable to load the theme you have selected.";
+            // @todo - Themes not available yet
+            // $errors[] = "Error: Unable to load the theme you have selected.";
         }
 
         return $errors;
@@ -608,7 +607,6 @@ class InstallController extends Controller
             'allow_multi_emails',
             'xss_clean_uploads',
             'deft_lang',
-            'send_headers',
             'time_format',
             'site_timezone',
             'cp_theme',
@@ -734,7 +732,7 @@ class InstallController extends Controller
         //  Remove Site Prefs from Config
         // ------------------------------------
 
-        foreach([$admin_default, $member_default, $template_default, $weblog_default] as $value) {
+        foreach(array_merge($admin_default, $member_default, $template_default, $weblog_default) as $value) {
             unset($config[$value]);
         }
 
@@ -949,11 +947,6 @@ class InstallController extends Controller
         if (! file_exists($this->system_path.'config/cms.php'))
         {
             $errors[] = ["Unable to locate the file 'config/cms.php'.", "Please make sure you have uploaded all components of this software."];
-        }
-
-        if (! file_exists($this->system_path.'resources/language/'.$this->data['deft_lang'].'/email_data.php'))
-        {
-            $errors[] = ["Unable to locate the file containing your email templates.", "Make sure you have uploaded all components of this software."];
         }
 
         // ---------------------------------------

@@ -2,8 +2,6 @@
 
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
-use DB;
-use Schema;
 
 class CreateCmsTables extends Migration
 {
@@ -414,7 +412,7 @@ class CreateCmsTables extends Migration
 
         // Category posts
         // Stores weblog entry ID and category IDs for entries
-        Schema::create('cms_weblog_entry_categories', function($table)
+        Schema::create('weblog_entry_categories', function($table)
         {
             $table->increments('weblog_entry_category_id');
             $table->unsignedInteger('entry_id')->index();
